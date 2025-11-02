@@ -100,7 +100,18 @@ export const sendChatMessage = async (
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        lastError = new Error(`API request failed: ${response.status} - ${JSON.stringify(errorData)}`);
+        let errorMessage = `API request failed: ${response.status}`;
+        
+        // Check for HTTP referrer restriction (403 error)
+        if (response.status === 403 && errorData?.error?.code === 403) {
+          const referrerError = errorData.error.details?.find((d: any) => d.reason === 'API_KEY_HTTP_REFERRER_BLOCKED');
+          if (referrerError) {
+            const domain = referrerError.metadata?.httpReferrer || 'your domain';
+            errorMessage = `API Key HTTP Referrer Restriction: Your domain ${domain} is not allowed. Please add it to Google Cloud Console → APIs & Services → Credentials → Your API Key → Application restrictions → HTTP referrers. Add: https://arogya-ai-orcin.vercel.app/*`;
+          }
+        }
+        
+        lastError = new Error(errorMessage);
         // Try next model on 404
         if (response.status === 404) continue;
         throw lastError;
