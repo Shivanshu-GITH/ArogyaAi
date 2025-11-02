@@ -1,27 +1,11 @@
 import React from 'react';
-import { Users, Trophy, Target, Heart, Code, Brain, Palette, Database, Phone, Mail, ExternalLink } from 'lucide-react';
+import { Users, Trophy, Target, Heart, Code, Brain, Database, Phone, Mail, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../utils/translations';
 
 const About = () => {
   const { language } = useLanguage();
-  const teamMembers = [
-    {
-      nameKey: "about.team.member.sakshi.name",
-      roleKey: "about.team.member.sakshi.role",
-      icon: Palette,
-      descriptionKey: "about.team.member.sakshi.desc",
-      skills: ["about.team.member.sakshi.skill.figma", "about.team.member.sakshi.skill.research", "about.team.member.sakshi.skill.accessibility", "about.team.member.sakshi.skill.mobile"]
-    },
-    {
-      nameKey: "about.team.member.ramit.name",
-      roleKey: "about.team.member.ramit.role",
-      icon: Code,
-      descriptionKey: "about.team.member.ramit.desc",
-      skills: ["about.team.member.ramit.skill.react", "about.team.member.ramit.skill.js", "about.team.member.ramit.skill.css", "about.team.member.ramit.skill.responsive"]
-    }
-  ];
 
   const projectHighlights = [
     {
@@ -125,12 +109,6 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center max-w-4xl mx-auto">
           <div className="lg:col-span-4 flex justify-center mb-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{getTranslation(language, 'about.team.lead.title')}</h3>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-4 flex justify-center mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -182,49 +160,6 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
-          
-          <div className="lg:col-span-4">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">{getTranslation(language, 'about.team.members.title')}</h3>
-          </div>
-          
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.nameKey}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow w-full max-w-sm"
-              >
-                <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <member.icon className="h-10 w-10 text-blue-600" />
-                </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {getTranslation(language, member.nameKey)}
-                </h3>
-                
-                <p className="text-blue-600 font-medium mb-3">
-                  {getTranslation(language, member.roleKey)}
-                </p>
-                
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {getTranslation(language, member.descriptionKey)}
-                </p>
-
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {member.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"
-                    >
-                      {getTranslation(language, skill)}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
