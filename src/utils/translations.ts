@@ -651,6 +651,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'vaccination.alerts.success': 'सचेतना की सदस्यता सफलतापूर्वक ली गई!',
     'vaccination.alerts.enterPhone': 'कृपया एक वैध फ़ोन नंबर दर्ज करें',
     'vaccination.alerts.whatsappSuccess': 'व्हाट्सएप चैट खोला गया! सदस्यता के लिए अपना संदेश भेजें।',
+    'vaccination.alerts.error.noConnection': 'सेवा से कनेक्ट नहीं कर सकते। कृपया अपना इंटरनेट कनेक्शन जांचें और बाद में पुनः प्रयास करें, या WhatsApp का उपयोग करके सदस्यता लें।',
+    'vaccination.alerts.error.failed': 'सदस्यता विफल रही। कृपया बाद में पुनः प्रयास करें या WhatsApp का उपयोग करके सदस्यता लें।',
     'vaccination.aadhaarLabel': 'आधार नंबर / स्वास्थ्य आईडी',
     'vaccination.priority': 'प्राथमिकता',
     'vaccination.priority.high': 'उच्च',
