@@ -193,7 +193,7 @@ const MentalHealthBot = () => {
           
           <div className="text-right">
             <div className="text-xs text-green-200">💙 Confidential</div>
-            <div className="text-xs text-green-200">🤖 Grok AI</div>
+            <div className="text-xs text-green-200">🤖 Google Gemini AI</div>
           </div>
         </div>
       </div>
