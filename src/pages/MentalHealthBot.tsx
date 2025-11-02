@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { sendChatMessage, ChatMessage } from '../services/googleAI';
 import { useLanguage } from '../contexts/LanguageContext';
 import { addLanguageToPrompt, getBrowserLanguageCode } from '../utils/languageHelper';
+import { getTranslation } from '../utils/translations';
 
 interface Message {
   id: string;
@@ -22,12 +23,24 @@ const MentalHealthBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m your Mental Health Support Assistant powered by Google Gemini AI. This is a safe, non-judgmental space where you can share your feelings and get emotional support. I\'m here to listen and provide coping strategies.\n\nHow are you feeling today?\n\n⚠️ This is not a substitute for professional care. For emergencies, contact a doctor or local emergency services immediately.',
+      text: '',
       sender: 'bot',
       timestamp: new Date(),
       sources: ['Google Gemini AI', 'Mental Health Resources']
     }
   ]);
+  
+  // Set initial welcome message based on language
+  useEffect(() => {
+    const welcomeText = `${getTranslation(language, 'chatbot.welcome.mental')}\n\n⚠️ ${getTranslation(language, 'chatbot.welcome.disclaimer')} ${getTranslation(language, 'chatbot.emergency')}`;
+    setMessages([{
+      id: '1',
+      text: welcomeText,
+      sender: 'bot',
+      timestamp: new Date(),
+      sources: ['Google Gemini AI', 'Mental Health Resources']
+    }]);
+  }, [language]);
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -110,7 +123,7 @@ const MentalHealthBot = () => {
     } catch (error) {
       const errorResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'I\'m having trouble connecting right now, but I want you to know that I care about you. If you\'re in crisis, please reach out to:\n\n• National Suicide Prevention: 9152987821\n• KIRAN Mental Health: 1800-599-0019\n• Emergency: 108\n\nPlease try again in a moment, or seek immediate professional help if needed.',
+        text: getTranslation(language, 'chatbot.mental.errorMessage'),
         sender: 'bot',
         timestamp: new Date(),
         sources: ['Emergency Protocols']
@@ -142,7 +155,7 @@ const MentalHealthBot = () => {
 
       recognition.onerror = () => {
         setIsListening(false);
-        alert('Voice recognition error. Please try again or type your message.');
+        alert(getTranslation(language, 'chatbot.voiceNotSupported'));
       };
 
       recognition.onend = () => {
@@ -151,7 +164,7 @@ const MentalHealthBot = () => {
 
       recognition.start();
     } else {
-      alert('Voice recognition is not supported in your browser. Please type your message.');
+      alert(getTranslation(language, 'chatbot.voiceNotSupported'));
     }
   };
 
@@ -165,7 +178,7 @@ const MentalHealthBot = () => {
       utterance.onend = () => setIsSpeaking(false);
       speechSynthesis.speak(utterance);
     } else {
-      alert('Text-to-speech is not supported in your browser.');
+      alert(getTranslation(language, 'chatbot.ttsNotSupported'));
     }
   };
 
@@ -186,13 +199,13 @@ const MentalHealthBot = () => {
               <Brain className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Mental Health Support Assistant</h1>
-              <p className="text-green-100 text-sm">A safe, AI-powered space for emotional support</p>
+              <h1 className="text-xl font-bold">{getTranslation(language, 'chatbot.mental.title')}</h1>
+              <p className="text-green-100 text-sm">{getTranslation(language, 'chatbot.mental.subtitle')}</p>
             </div>
           </div>
           
           <div className="text-right">
-            <div className="text-xs text-green-200">💙 Confidential</div>
+            <div className="text-xs text-green-200">💙 {getTranslation(language, 'chatbot.mental.confidential')}</div>
             <div className="text-xs text-green-200">🤖 Google Gemini AI</div>
           </div>
         </div>
@@ -204,8 +217,8 @@ const MentalHealthBot = () => {
           <div className="max-w-4xl mx-auto flex items-center space-x-3">
             <AlertTriangle className="h-6 w-6" />
             <div>
-              <p className="font-semibold">Emergency Response Activated</p>
-              <p className="text-sm">Crisis support has been notified. Help is on the way.</p>
+              <p className="font-semibold">{getTranslation(language, 'chatbot.mental.emergencyActivated')}</p>
+              <p className="text-sm">{getTranslation(language, 'chatbot.mental.emergencyMessage')}</p>
             </div>
           </div>
         </div>
@@ -253,7 +266,7 @@ const MentalHealthBot = () => {
                         <div className="mt-3 pt-2 border-t border-gray-300">
                           <div className="flex items-center space-x-1 mb-1">
                             <ExternalLink className="h-3 w-3 text-gray-500" />
-                            <span className="text-xs text-gray-500 font-medium">Sources:</span>
+                            <span className="text-xs text-gray-500 font-medium">{getTranslation(language, 'chatbot.sources')}</span>
                           </div>
                           {message.sources.map((source, index) => (
                             <div key={index} className="text-xs text-gray-600">
@@ -306,7 +319,7 @@ const MentalHealthBot = () => {
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
-                      <span className="text-xs text-green-600">Listening with care...</span>
+                      <span className="text-xs text-green-600">{getTranslation(language, 'chatbot.mental.listening')}</span>
                     </div>
                   </div>
                 </div>
@@ -325,7 +338,7 @@ const MentalHealthBot = () => {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Share your feelings, thoughts, or concerns..."
+                  placeholder={getTranslation(language, 'chatbot.mental.placeholder')}
                   className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
                 <button
@@ -352,7 +365,7 @@ const MentalHealthBot = () => {
             
             <div className="mt-2 text-center">
               <p className="text-xs text-gray-500">
-                💚 Try saying: "I'm feeling stressed" or "I need someone to talk to"
+                💚 {getTranslation(language, 'chatbot.mental.try')}
               </p>
             </div>
           </div>
@@ -364,24 +377,24 @@ const MentalHealthBot = () => {
         <div className="bg-red-50 border border-red-200 rounded-lg p-4">
           <div className="flex items-center space-x-2 mb-3">
             <Phone className="h-5 w-5 text-red-600" />
-            <h3 className="font-semibold text-red-800">🆘 Crisis Resources - Available 24/7</h3>
+            <h3 className="font-semibold text-red-800">🆘 {getTranslation(language, 'chatbot.mental.crisisResources')}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="text-red-700">
-              <p className="font-medium">Suicide Prevention</p>
+              <p className="font-medium">{getTranslation(language, 'chatbot.mental.suicidePrevention')}</p>
               <p>📞 9152987821</p>
             </div>
             <div className="text-red-700">
-              <p className="font-medium">KIRAN Mental Health</p>
+              <p className="font-medium">{getTranslation(language, 'chatbot.mental.kiranMentalHealth')}</p>
               <p>📞 1800-599-0019</p>
             </div>
             <div className="text-red-700">
-              <p className="font-medium">Vandrevala Foundation</p>
+              <p className="font-medium">{getTranslation(language, 'chatbot.mental.vandrevalaFoundation')}</p>
               <p>📞 9999666555</p>
             </div>
           </div>
           <p className="text-red-600 text-xs mt-2">
-            If you're having thoughts of self-harm or suicide, please reach out immediately. You are not alone.
+            {getTranslation(language, 'chatbot.mental.crisisMessage')}
           </p>
         </div>
       </div>
@@ -390,7 +403,7 @@ const MentalHealthBot = () => {
       <div className="max-w-4xl mx-auto p-4">
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
           <p className="text-blue-800 text-sm text-center">
-            💙 This chatbot provides AI-powered emotional support and general mental health information. This is not a substitute for professional care. For emergencies, contact a doctor or local emergency services immediately.
+            💙 {getTranslation(language, 'chatbot.mental.disclaimerFull')}
           </p>
         </div>
       </div>

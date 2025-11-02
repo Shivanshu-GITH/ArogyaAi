@@ -3,7 +3,8 @@ import { Send, Mic, MicOff, Volume2, VolumeX, Camera, Upload, User, Bot, X, Aler
 import { motion, AnimatePresence } from 'framer-motion';
 import { sendChatMessage, analyzeImage, ChatMessage } from '../services/googleAI';
 import { useLanguage } from '../contexts/LanguageContext';
-import { addLanguageToPrompt } from '../utils/languageHelper';
+import { addLanguageToPrompt, getBrowserLanguageCode } from '../utils/languageHelper';
+import { getTranslation } from '../utils/translations';
 
 interface Message {
   id: string;
@@ -22,12 +23,24 @@ const ImageVoiceBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m your Image & Voice Assistant powered by Google Gemini AI. I can analyze medical images, help with skin conditions, and respond to voice queries in multiple languages.\n\n**I can help with:**\n• Medical image analysis (skin conditions, wounds, rashes)\n• Voice input in 8+ Indian languages\n• OCR for prescriptions and lab reports\n• Accessibility support\n\nHow can I assist you today?\n\n⚠️ This is not a substitute for professional care. For emergencies, contact a doctor immediately.',
+      text: '',
       sender: 'bot',
       timestamp: new Date(),
       sources: ['Google Gemini AI', 'Vision API']
     }
   ]);
+  
+  // Set initial welcome message based on language
+  useEffect(() => {
+    const welcomeText = `${getTranslation(appLanguage, 'chatbot.welcome.imageVoice')}\n\n⚠️ ${getTranslation(appLanguage, 'chatbot.welcome.disclaimer')} ${getTranslation(appLanguage, 'chatbot.emergency')}`;
+    setMessages([{
+      id: '1',
+      text: welcomeText,
+      sender: 'bot',
+      timestamp: new Date(),
+      sources: ['Google Gemini AI', 'Vision API']
+    }]);
+  }, [appLanguage]);
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -71,7 +84,7 @@ const ImageVoiceBot = () => {
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: inputText || 'Image uploaded for analysis',
+      text: inputText || getTranslation(appLanguage, 'chatbot.imageVoice.imageUploaded'),
       sender: 'user',
       timestamp: new Date(),
       image: selectedImage || undefined
@@ -129,7 +142,7 @@ const ImageVoiceBot = () => {
     } catch (error) {
       const errorResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'I\'m having trouble processing your request right now. For urgent medical concerns, please contact:\n\n• Emergency: 108\n• Medical Emergency: 102\n• Nearest hospital\n\nPlease try again in a moment.',
+        text: getTranslation(appLanguage, 'chatbot.imageVoice.errorMessage'),
         sender: 'bot',
         timestamp: new Date(),
         sources: ['System Error']
@@ -145,13 +158,13 @@ const ImageVoiceBot = () => {
     if (file) {
       // Check file size (max 5MB)
       if (file.size > 5 * 1024 * 1024) {
-        alert('Image size should be less than 5MB. Please choose a smaller image.');
+        alert(getTranslation(appLanguage, 'chatbot.imageVoice.goodImage4') + '. ' + getTranslation(appLanguage, 'chatbot.imageVoice.placeholder'));
         return;
       }
       
       // Check file type
       if (!file.type.startsWith('image/')) {
-        alert('Please upload a valid image file (JPG, PNG, etc.).');
+        alert(getTranslation(appLanguage, 'chatbot.imageVoice.imageAlt'));
         return;
       }
       
@@ -170,7 +183,7 @@ const ImageVoiceBot = () => {
       
       recognition.continuous = false;
       recognition.interimResults = false;
-      recognition.lang = language;
+      recognition.lang = getBrowserLanguageCode(appLanguage);
 
       recognition.onstart = () => {
         setIsListening(true);
@@ -185,7 +198,7 @@ const ImageVoiceBot = () => {
       recognition.onerror = (event: any) => {
         setIsListening(false);
         console.error('Speech recognition error:', event.error);
-        alert('Voice recognition error. Please try again or type your message.');
+        alert(getTranslation(appLanguage, 'chatbot.voiceNotSupported'));
       };
 
       recognition.onend = () => {
@@ -194,7 +207,7 @@ const ImageVoiceBot = () => {
 
       recognition.start();
     } else {
-      alert('Voice recognition is not supported in your browser. Please type your message.');
+      alert(getTranslation(appLanguage, 'chatbot.voiceNotSupported'));
     }
   };
 
@@ -202,12 +215,12 @@ const ImageVoiceBot = () => {
     if ('speechSynthesis' in window) {
       setIsSpeaking(true);
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = language;
+      utterance.lang = getBrowserLanguageCode(appLanguage);
       utterance.rate = 0.9;
       utterance.onend = () => setIsSpeaking(false);
       speechSynthesis.speak(utterance);
     } else {
-      alert('Text-to-speech is not supported in your browser.');
+      alert(getTranslation(appLanguage, 'chatbot.ttsNotSupported'));
     }
   };
 
@@ -228,8 +241,8 @@ const ImageVoiceBot = () => {
               <Camera className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Image & Voice Assistant</h1>
-              <p className="text-purple-100 text-sm">AI image analysis & multilingual voice support</p>
+              <h1 className="text-xl font-bold">{getTranslation(appLanguage, 'chatbot.imageVoice.title')}</h1>
+              <p className="text-purple-100 text-sm">{getTranslation(appLanguage, 'chatbot.imageVoice.subtitle')}</p>
             </div>
           </div>
           
@@ -283,7 +296,7 @@ const ImageVoiceBot = () => {
                         <div className="mb-3">
                           <img 
                             src={message.image} 
-                            alt="Medical image for analysis" 
+                            alt={getTranslation(appLanguage, 'chatbot.imageVoice.imageAlt')} 
                             className="max-w-64 max-h-64 rounded-lg object-cover border border-gray-200"
                           />
                         </div>
@@ -295,7 +308,7 @@ const ImageVoiceBot = () => {
                         <div className="mt-3 pt-2 border-t border-gray-300">
                           <div className="flex items-center space-x-1 mb-1">
                             <ExternalLink className="h-3 w-3 text-gray-500" />
-                            <span className="text-xs text-gray-500 font-medium">Medical Sources:</span>
+                            <span className="text-xs text-gray-500 font-medium">{getTranslation(appLanguage, 'chatbot.sources')}</span>
                           </div>
                           {message.sources.map((source, index) => (
                             <div key={index} className="text-xs text-gray-600">
@@ -349,7 +362,7 @@ const ImageVoiceBot = () => {
                         <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
                       <span className="text-xs text-purple-600">
-                        {selectedImage ? 'Analyzing image with AI...' : 'Processing voice input...'}
+                        {selectedImage ? getTranslation(appLanguage, 'chatbot.imageVoice.imageAnalysis') : getTranslation(appLanguage, 'chatbot.imageVoice.processingVoice')}
                       </span>
                     </div>
                   </div>
@@ -366,7 +379,7 @@ const ImageVoiceBot = () => {
               <div className="relative inline-block">
                 <img 
                   src={selectedImage} 
-                  alt="Selected for analysis" 
+                  alt={getTranslation(appLanguage, 'chatbot.imageVoice.selectedImage')} 
                   className="max-w-32 max-h-32 rounded-lg object-cover border border-gray-300"
                 />
                 <button
@@ -376,7 +389,7 @@ const ImageVoiceBot = () => {
                   <X className="h-3 w-3" />
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Image ready for AI analysis</p>
+              <p className="text-xs text-gray-500 mt-2">{getTranslation(appLanguage, 'chatbot.imageVoice.imageReady')}</p>
             </div>
           )}
 
@@ -386,7 +399,7 @@ const ImageVoiceBot = () => {
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="p-3 text-purple-600 hover:bg-purple-100 rounded-full transition-colors"
-                title="Upload medical image"
+                title={getTranslation(appLanguage, 'chatbot.imageVoice.uploadButton')}
               >
                 <Upload className="h-4 w-4" />
               </button>
@@ -397,7 +410,7 @@ const ImageVoiceBot = () => {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Describe symptoms or upload medical image..."
+                  placeholder={getTranslation(appLanguage, 'chatbot.imageVoice.placeholder')}
                   className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
                 <button
@@ -408,7 +421,7 @@ const ImageVoiceBot = () => {
                       ? 'bg-red-100 text-red-600' 
                       : 'hover:bg-gray-100 text-gray-600'
                   }`}
-                  title={`Voice input in ${languages.find(l => l.code === language)?.name}`}
+                  title={getTranslation(appLanguage, 'chatbot.imageVoice.voiceTitle').replace('{language}', languages.find(l => l.code === language)?.name || '')}
                 >
                   {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
                 </button>
@@ -425,7 +438,7 @@ const ImageVoiceBot = () => {
             
             <div className="mt-2 text-center">
               <p className="text-xs text-gray-500">
-                📸 Upload medical images or 🎤 use voice input in {languages.find(l => l.code === language)?.name}
+                📸 {getTranslation(appLanguage, 'chatbot.imageVoice.hint').replace('{language}', languages.find(l => l.code === language)?.name || '')}
               </p>
             </div>
           </div>
@@ -444,24 +457,24 @@ const ImageVoiceBot = () => {
       {/* Usage Guidelines */}
       <div className="max-w-4xl mx-auto p-4">
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="font-semibold text-blue-800 mb-2">📋 Image Upload Guidelines</h3>
+          <h3 className="font-semibold text-blue-800 mb-2">📋 {getTranslation(appLanguage, 'chatbot.imageVoice.guidelinesTitle')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-700">
             <div>
-              <p className="font-medium mb-1">✅ Good Images:</p>
+              <p className="font-medium mb-1">✅ {getTranslation(appLanguage, 'chatbot.imageVoice.goodImages')}</p>
               <ul className="text-xs space-y-1">
-                <li>• Clear, well-lit photos</li>
-                <li>• Close-up of affected area</li>
-                <li>• Multiple angles if needed</li>
-                <li>• Less than 5MB size</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.goodImage1')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.goodImage2')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.goodImage3')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.goodImage4')}</li>
               </ul>
             </div>
             <div>
-              <p className="font-medium mb-1">❌ Avoid:</p>
+              <p className="font-medium mb-1">❌ {getTranslation(appLanguage, 'chatbot.imageVoice.avoidTitle')}</p>
               <ul className="text-xs space-y-1">
-                <li>• Blurry or dark images</li>
-                <li>• Too far from subject</li>
-                <li>• Personal identifying info</li>
-                <li>• Inappropriate content</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.avoid1')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.avoid2')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.avoid3')}</li>
+                <li>• {getTranslation(appLanguage, 'chatbot.imageVoice.avoid4')}</li>
               </ul>
             </div>
           </div>
@@ -474,10 +487,9 @@ const ImageVoiceBot = () => {
           <div className="flex items-center space-x-2">
             <AlertTriangle className="h-5 w-5 text-orange-600" />
             <div>
-              <p className="text-orange-800 text-sm font-medium">Medical Disclaimer</p>
+              <p className="text-orange-800 text-sm font-medium">{getTranslation(appLanguage, 'chatbot.imageVoice.medicalDisclaimer')}</p>
               <p className="text-orange-700 text-xs">
-                This AI assistant provides general guidance only. Image analysis is not a medical diagnosis. 
-                This is not a substitute for professional care. For emergencies, contact a doctor or local emergency services immediately.
+                {getTranslation(appLanguage, 'chatbot.imageVoice.disclaimerFull')}
               </p>
             </div>
           </div>
