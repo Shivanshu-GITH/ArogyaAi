@@ -392,7 +392,7 @@ const GeneralHealthBot = () => {
             
             <div className="mt-2 text-center">
               <p className="text-xs text-gray-500">
-                💡 Try: "I have fever and cough" or "Tell me about diabetes management"
+                💡 {getTranslation(language, 'chatbot.try')}
               </p>
             </div>
           </div>
@@ -405,9 +405,9 @@ const GeneralHealthBot = () => {
           <div className="flex items-center space-x-2">
             <AlertTriangle className="h-5 w-5 text-red-600" />
             <div>
-              <p className="text-red-800 text-sm font-medium">Emergency Contacts</p>
+              <p className="text-red-800 text-sm font-medium">{getTranslation(language, 'chatbot.emergencyContacts')}</p>
               <p className="text-red-700 text-xs">
-                Medical Emergency: 102 | General Emergency: 108 | Ambulance: 108
+                {getTranslation(language, 'chatbot.emergencyNumbers')}
               </p>
             </div>
           </div>
@@ -418,7 +418,7 @@ const GeneralHealthBot = () => {
       <div className="max-w-4xl mx-auto p-4">
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
           <p className="text-yellow-800 text-sm text-center">
-            ⚠️ This chatbot provides AI-generated health information from trusted sources. This is not a substitute for professional care. For emergencies, contact a doctor or local emergency services immediately.
+            ⚠️ {getTranslation(language, 'chatbot.disclaimerFull')}
           </p>
         </div>
       </div>

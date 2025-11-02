@@ -75,6 +75,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'Voice recognition is not supported in your browser.',
     'chatbot.ttsNotSupported': 'Text-to-speech is not supported in your browser.',
     'chatbot.emergency': 'For emergencies, contact a doctor or local emergency services immediately.',
+    'chatbot.try': 'Try: "I have fever and cough" or "Tell me about diabetes management"',
+    'chatbot.emergencyContacts': 'Emergency Contacts',
+    'chatbot.emergencyNumbers': 'Medical Emergency: 102 | General Emergency: 108 | Ambulance: 108',
+    'chatbot.disclaimerFull': 'This chatbot provides AI-generated health information from trusted sources. This is not a substitute for professional care. For emergencies, contact a doctor or local emergency services immediately.',
     
     // Welcome Messages
     'chatbot.welcome.general': 'Hello! I\'m your General Health Assistant powered by Google Gemini AI. I can help you with symptoms, prevention tips, vaccination guidance, and health queries. How can I assist you today?',
@@ -452,6 +456,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'आवाज पहचान आपके ब्राउज़र में समर्थित नहीं है।',
     'chatbot.ttsNotSupported': 'टेक्स्ट-टू-स्पीच आपके ब्राउज़र में समर्थित नहीं है।',
     'chatbot.emergency': 'आपातकाल के लिए, तुरंत डॉक्टर या स्थानीय आपातकालीन सेवाओं से संपर्क करें।',
+    'chatbot.try': 'कोशिश करें: "मुझे बुखार और खांसी है" या "मधुमेह प्रबंधन के बारे में बताएं"',
+    'chatbot.emergencyContacts': 'आपातकालीन संपर्क',
+    'chatbot.emergencyNumbers': 'चिकित्सा आपातकाल: 102 | सामान्य आपातकाल: 108 | एम्बुलेंस: 108',
+    'chatbot.disclaimerFull': 'यह चैटबॉट विश्वसनीय स्रोतों से एआई-जनित स्वास्थ्य जानकारी प्रदान करता है। यह पेशेवर देखभाल का विकल्प नहीं है। आपातकाल के लिए, तुरंत डॉक्टर या स्थानीय आपातकालीन सेवाओं से संपर्क करें।',
     
     // Welcome Messages
     'chatbot.welcome.general': 'नमस्ते! मैं आपका सामान्य स्वास्थ्य सहायक हूं, Google Gemini एआई द्वारा संचालित। मैं लक्षण, रोकथाम युक्तियां, टीकाकरण मार्गदर्शन, और स्वास्थ्य प्रश्नों में मदद कर सकता हूं। आज मैं आपकी कैसे सहायता कर सकता हूं?',
@@ -829,6 +837,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'আপনার ব্রাউজারে ভয়েস শনাক্তকরণ সমর্থিত নয়।',
     'chatbot.ttsNotSupported': 'আপনার ব্রাউজারে টেক্সট-টু-স্পিচ সমর্থিত নয়।',
     'chatbot.emergency': 'জরুরি অবস্থার জন্য, অবিলম্বে একজন ডাক্তার বা স্থানীয় জরুরি পরিষেবার সাথে যোগাযোগ করুন।',
+    'chatbot.try': 'চেষ্টা করুন: "আমার জ্বর এবং কাশি হয়েছে" বা "ডায়াবেটিস পরিচালনা সম্পর্কে বলুন"',
+    'chatbot.emergencyContacts': 'জরুরি যোগাযোগ',
+    'chatbot.emergencyNumbers': 'চিকিৎসা জরুরি: 102 | সাধারণ জরুরি: 108 | অ্যাম্বুলেন্স: 108',
+    'chatbot.disclaimerFull': 'এই চ্যাটবট বিশ্বস্ত উত্স থেকে AI-জেনারেটেড স্বাস্থ্য তথ্য প্রদান করে। এটি পেশাদার যত্নের বিকল্প নয়। জরুরি অবস্থার জন্য, অবিলম্বে একজন ডাক্তার বা স্থানীয় জরুরি পরিষেবার সাথে যোগাযোগ করুন।',
     
     // Welcome Messages
     'chatbot.welcome.general': 'হ্যালো! আমি আপনার সাধারণ স্বাস্থ্য সহায়ক, Google Gemini এআই দ্বারা চালিত। আমি উপসর্গ, প্রতিরোধ টিপস, টিকাকরণ নির্দেশনা এবং স্বাস্থ্যের প্রশ্নে সাহায্য করতে পারি। আজ আমি কীভাবে আপনাকে সাহায্য করতে পারি?',
@@ -1206,6 +1218,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'உங்கள் உலாவியில் குரல் அங்கீகாரம் ஆதரிக்கப்படவில்லை.',
     'chatbot.ttsNotSupported': 'உங்கள் உலாவியில் உரை-முதல்-பேச்சு ஆதரிக்கப்படவில்லை.',
     'chatbot.emergency': 'அவசரகாலங்களுக்கு, உடனடியாக மருத்துவரிடமோ அல்லது உள்ளூர் அவசரகால சேவைகளிடமோ தொடர்பு கொள்ளவும்.',
+    'chatbot.try': 'முயற்சிக்க: "எனக்கு காய்ச்சல் மற்றும் இருமல் உள்ளது" அல்லது "நீரிழிவு நிர்வாகத்தைப் பற்றி சொல்லுங்கள்"',
+    'chatbot.emergencyContacts': 'அவசரகால தொடர்புகள்',
+    'chatbot.emergencyNumbers': 'மருத்துவ அவசரகாலம்: 102 | பொது அவசரகாலம்: 108 | ஆம்புலன்ஸ்: 108',
+    'chatbot.disclaimerFull': 'இந்த சாட்பாட் நம்பகமான மூலங்களிலிருந்து AI-ஜெனரேட் செய்யப்பட்ட சுகாதார தகவல்களை வழங்குகிறது. இது தொழில்முறை பராமரிப்புக்கான மாற்றீடு அல்ல. அவசரகாலங்களுக்கு, உடனடியாக மருத்துவரிடமோ அல்லது உள்ளூர் அவசரகால சேவைகளிடமோ தொடர்பு கொள்ளவும்.',
     
     // Welcome Messages
     'chatbot.welcome.general': 'வணக்கம்! நான் உங்கள் பொது சுகாதார உதவியாளர், Google Gemini AI-ஆல் இயக்கப்படுகிறேன். அறிகுறிகள், தடுப்பு உதவிக்குறிப்புகள், தடுப்பூசி வழிகாட்டுதல் மற்றும் சுகாதார கேள்விகளில் உங்களுக்கு உதவ முடியும். இன்று நான் எவ்வாறு உங்களுக்கு உதவ முடியும்?',
@@ -1583,6 +1599,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'మీ బ్రౌజర్‌లో వాయిస్ గుర్తింపు మద్దతు లేదు.',
     'chatbot.ttsNotSupported': 'మీ బ్రౌజర్‌లో టెక్స్ట్-టు-స్పీచ్ మద్దతు లేదు.',
     'chatbot.emergency': 'అత్యవసర పరిస్థితులకు, వెంటనే వైద్యుడు లేదా స్థానిక అత్యవసర సేవలను సంప్రదించండి.',
+    'chatbot.try': 'ప్రయత్నించండి: "నాకు జ్వరం మరియు దగ్గు ఉంది" లేదా "డయాబెటిస్ నిర్వహణ గురించి చెప్పండి"',
+    'chatbot.emergencyContacts': 'అత్యవసర సంప్రదింపులు',
+    'chatbot.emergencyNumbers': 'వైద్య అత్యవసరం: 102 | సాధారణ అత్యవసరం: 108 | అంబులెన్స్: 108',
+    'chatbot.disclaimerFull': 'ఈ చాట్బాట్ విశ్వసనీయ మూలాల నుండి AI-జెనరేట్ చేసిన ఆరోగ్య సమాచారాన్ని అందిస్తుంది. ఇది ప్రొఫెషనల్ కేర్ కి ప్రత్యామ్నాయం కాదు. అత్యవసర పరిస్థితులకు, వెంటనే వైద్యుడు లేదా స్థానిక అత్యవసర సేవలను సంప్రదించండి.',
     
     // Welcome Messages
     'chatbot.welcome.general': 'హలో! నేను మీ సాధారణ ఆరోగ్య సహాయకుడిని, Google Gemini AI-చేత నడుపబడుతున్నాను. లక్షణాలు, నివారణ చిట్కాలు, వాక్సినేషన్ మార్గదర్శకత్వం మరియు ఆరోగ్య ప్రశ్నలలో మీకు సహాయం చేయగలను. ఈరోజు నేను మీకు ఎలా సహాయం చేయగలను?',
@@ -1960,6 +1980,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'chatbot.voiceNotSupported': 'તમારા બ્રાઉઝરમાં અવાજ ઓળખ સમર્થિત નથી.',
     'chatbot.ttsNotSupported': 'તમારા બ્રાઉઝરમાં ટેક્સ્ટ-ટુ-સ્પીચ સમર્થિત નથી.',
     'chatbot.emergency': 'અનુકંપા માટે, તરત જ ડૉક્ટર અથવા સ્થાનિક અનુકંપા સેવાઓનો સંપર્ક કરો.',
+    'chatbot.try': 'પ્રયાસ કરો: "મારે તાવ અને ખાંસી છે" અથવા "મધુમેહ સંચાલન વિશે કહો"',
+    'chatbot.emergencyContacts': 'અનુકંપા સંપર્કો',
+    'chatbot.emergencyNumbers': 'તબીબી અનુકંપા: 102 | સામાન્ય અનુકંપા: 108 | એમ્બ્યુલેન્સ: 108',
+    'chatbot.disclaimerFull': 'આ ચેટબોટ વિશ્વસનીય સ્રોતો પરથી AI-જનરેટેડ આરોગ્ય માહિતી પ્રદાન કરે છે. આ વ્યાવસાયિક સંભાળનો વિકલ્પ નથી. અનુકંપા માટે, તરત જ ડૉક્ટર અથવા સ્થાનિક અનુકંપા સેવાઓનો સંપર્ક કરો.',
     
     // Welcome Messages
     'chatbot.welcome.general': 'હેલો! હું તમારો સામાન્ય આરોગ્ય સહાયક છું, Google Gemini AI દ્વારા ચલાવવામાં આવે છે. હું લક્ષણો, અટકાવ ટિપ્સ, રસીકરણ માર્ગદર્શિકા અને આરોગ્ય પ્રશ્નોમાં તમને મદદ કરી શકું છું. આજે હું તમને કેવી રીતે મદદ કરી શકું?',
