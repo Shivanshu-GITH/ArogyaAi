@@ -122,11 +122,16 @@ const Vaccination = () => {
           setSuccessMessage('');
         }, 8000);
       } else {
-        setErrorMessage(data.error || 'Failed to subscribe. Please try again.');
+        setErrorMessage(data.error || getTranslation(language, 'vaccination.alerts.error.failed') || 'Failed to subscribe. Please try again.');
       }
     } catch (error: any) {
       console.error('SMS subscription error:', error);
-      setErrorMessage(`Unable to connect to server.\n\nTo start the backend:\n1. Open a terminal in the project root\n2. Run: cd server && node server-simple.cjs\n\nOr double-click: start-backend.bat`);
+      // Check if it's a network error or server unavailable
+      if (error.message?.includes('Failed to fetch') || error.message?.includes('NetworkError')) {
+        setErrorMessage(getTranslation(language, 'vaccination.alerts.error.noConnection') || 'Unable to connect to the service. Please check your internet connection and try again later, or use WhatsApp to subscribe.');
+      } else {
+        setErrorMessage(getTranslation(language, 'vaccination.alerts.error.failed') || 'Subscription failed. Please try again later or use WhatsApp to subscribe.');
+      }
     } finally {
       setIsLoading(false);
     }
