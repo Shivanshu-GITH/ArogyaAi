@@ -30,8 +30,8 @@ export const sendChatMessage = async (
 ): Promise<string> => {
   try {
     if (!GOOGLE_API_KEY) {
-      console.error('Google API Key is missing. Please check your .env file.');
-      throw new Error('API Key not configured');
+      console.error('Google API Key is missing. Please check your environment variables.');
+      throw new Error('API Key not configured. Please set VITE_GOOGLE_API_KEY in your environment variables (Vercel Settings → Environment Variables).');
     }
 
     const sanitizedMessage = sanitizeUserInput(message);
