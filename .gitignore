@@ -25,6 +25,9 @@ dist-ssr
 .env
 .env.local
 
+# Bolt AI tooling
+.bolt
+
 # Database files
 *.db
 *.sqlite
