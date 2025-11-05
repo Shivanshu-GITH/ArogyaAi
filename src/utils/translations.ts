@@ -367,7 +367,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-powered multilingual healthcare assistant',
     'about.project.mission': 'Mission',
     'about.project.missionDesc': 'Making healthcare accessible to all through technology',
-    'about.team.title': 'Project Creator',
+    'about.team.title': 'Our Team',
     'about.team.subtitle': 'Meet the people behind ArogyaAI',
     'about.tech.title': 'Technologies Used',
     'about.tech.subtitle': 'Built with modern tools and frameworks',

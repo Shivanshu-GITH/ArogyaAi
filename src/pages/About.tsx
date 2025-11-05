@@ -32,6 +32,14 @@ const About = () => {
     "about.team.lead.skill.react", "about.team.lead.skill.node", "about.team.lead.skill.aiml", "about.team.lead.skill.system", "about.team.lead.skill.health"
   ];
 
+  const sakshiSkills = [
+    "about.team.member.sakshi.skill.figma", "about.team.member.sakshi.skill.research", "about.team.member.sakshi.skill.accessibility", "about.team.member.sakshi.skill.mobile"
+  ];
+
+  const ramitSkills = [
+    "about.team.member.ramit.skill.react", "about.team.member.ramit.skill.js", "about.team.member.ramit.skill.css", "about.team.member.ramit.skill.responsive"
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -107,13 +115,14 @@ const About = () => {
             </p>
           </div>
           
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Team Lead Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 text-center max-w-md hover:shadow-lg transition-shadow"
+              className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
             >
               <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                 <Code className="h-12 w-12 text-blue-600" />
@@ -157,6 +166,78 @@ const About = () => {
                     {getTranslation(language, 'about.team.lead.contact.github')}: Shivanshu-GITH
                   </a>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* Sakshi Negi Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+            >
+              <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                <Users className="h-12 w-12 text-purple-600" />
+              </div>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {getTranslation(language, 'about.team.member.sakshi.name')}
+              </h3>
+              
+              <p className="text-purple-600 font-medium mb-3">
+                {getTranslation(language, 'about.team.member.sakshi.role')}
+              </p>
+              
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                {getTranslation(language, 'about.team.member.sakshi.desc')}
+              </p>
+
+              <div className="flex flex-wrap gap-1 justify-center mb-4">
+                {sakshiSkills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded"
+                  >
+                    {getTranslation(language, skill)}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Ramit Raj Singh Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+            >
+              <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                <Code className="h-12 w-12 text-green-600" />
+              </div>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {getTranslation(language, 'about.team.member.ramit.name')}
+              </h3>
+              
+              <p className="text-green-600 font-medium mb-3">
+                {getTranslation(language, 'about.team.member.ramit.role')}
+              </p>
+              
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                {getTranslation(language, 'about.team.member.ramit.desc')}
+              </p>
+
+              <div className="flex flex-wrap gap-1 justify-center mb-4">
+                {ramitSkills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"
+                  >
+                    {getTranslation(language, skill)}
+                  </span>
+                ))}
               </div>
             </motion.div>
           </div>
