@@ -367,15 +367,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-powered multilingual healthcare assistant',
     'about.project.mission': 'Mission',
     'about.project.missionDesc': 'Making healthcare accessible to all through technology',
-    'about.team.title': 'Our Team',
+    'about.team.title': 'Our Creator',
     'about.team.subtitle': 'Meet the people behind ArogyaAI',
     'about.tech.title': 'Technologies Used',
     'about.tech.subtitle': 'Built with modern tools and frameworks',
     
     // Team Members Section
-    'about.team.lead.title': 'Our Team Lead',
+    'about.team.lead.title': 'Our Lead',
     'about.team.lead.name': 'Shivanshu Tiwari',
-    'about.team.lead.role': 'Team Lead - Developer & Prompt Specialist',
+    'about.team.lead.role': 'Lead - Developer & Prompt Specialist',
     'about.team.lead.desc': 'Leading the technical development and AI integration for healthcare solutions. Passionate about making healthcare accessible through technology.',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -383,23 +383,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'System Design',
     'about.team.lead.skill.health': 'Healthcare Tech',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'Team Members',
-    'about.team.member.sakshi.name': 'Sakshi Negi',
-    'about.team.member.sakshi.role': 'UI/UX Designer',
-    'about.team.member.sakshi.desc': 'Creating accessible and user-friendly interfaces for diverse user groups.',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'User Research',
-    'about.team.member.sakshi.skill.accessibility': 'Accessibility',
-    'about.team.member.sakshi.skill.mobile': 'Mobile Design',
-    
-    'about.team.member.ramit.name': 'Ramit Raj Singh',
-    'about.team.member.ramit.role': 'Frontend Developer',
-    'about.team.member.ramit.desc': 'Developing responsive and interactive user interfaces for the healthcare platform.',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'Responsive Design',
     
     // Mission & Vision
     'about.mission.title': 'Our Mission',
@@ -414,7 +397,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'Regional languages supported',
     'about.impact.availability': 'Healthcare guidance availability',
     'about.impact.quote': '"Healthcare is a fundamental right, not a privilege. Through ArogyaAI, we\'re committed to ensuring that every person in India has access to reliable health information and guidance, breaking down barriers of language, technology, and geography."',
-    'about.impact.team': '- Team ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -795,15 +778,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'एआई-संचालित बहुभाषी स्वास्थ्य सहायक',
     'about.project.mission': 'मिशन',
     'about.project.missionDesc': 'तकनीक के माध्यम से सभी को स्वास्थ्य सेवा सुलभ बनाना',
-    'about.team.title': 'प्रोजेक्ट निर्माता',
+    'about.team.title': 'हमारे निर्माता',
     'about.team.subtitle': 'ArogyaAI के पीछे के लोगों से मिलें',
     'about.tech.title': 'उपयोग की गई तकनीकें',
     'about.tech.subtitle': 'आधुनिक उपकरणों और फ्रेमवर्क के साथ निर्मित',
     
     // Team Members Section
-    'about.team.lead.title': 'हमारे टीम लीड',
+    'about.team.lead.title': 'हमारे लीड',
     'about.team.lead.name': 'शिवांशु तिवारी',
-    'about.team.lead.role': 'टीम लीड - डेवलपर और प्रॉम्प्ट विशेषज्ञ',
+    'about.team.lead.role': 'लीड - डेवलपर और प्रॉम्प्ट विशेषज्ञ',
     'about.team.lead.desc': 'स्वास्थ्य समाधानों के लिए तकनीकी विकास और AI एकीकरण का नेतृत्व कर रहे हैं। प्रौद्योगिकी के माध्यम से स्वास्थ्य को सुलभ बनाने के प्रति उत्साही।',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -811,23 +794,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'सिस्टम डिज़ाइन',
     'about.team.lead.skill.health': 'हेल्थकेयर टेक',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'टीम सदस्य',
-    'about.team.member.sakshi.name': 'साक्षी नेगी',
-    'about.team.member.sakshi.role': 'UI/UX डिज़ाइनर',
-    'about.team.member.sakshi.desc': 'विविध उपयोगकर्ता समूहों के लिए सुलभ और उपयोगकर्ता-अनुकूल इंटरफेस बना रही हैं।',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'उपयोगकर्ता अनुसंधान',
-    'about.team.member.sakshi.skill.accessibility': 'सुलभता',
-    'about.team.member.sakshi.skill.mobile': 'मोबाइल डिज़ाइन',
-    
-    'about.team.member.ramit.name': 'रमित राज सिंह',
-    'about.team.member.ramit.role': 'फ्रंटएंड डेवलपर',
-    'about.team.member.ramit.desc': 'स्वास्थ्य प्लेटफॉर्म के लिए प्रतिक्रियाशील और इंटरैक्टिव उपयोगकर्ता इंटरफेस विकसित कर रहे हैं।',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'प्रतिक्रियाशील डिज़ाइन',
     
     // Mission & Vision
     'about.mission.title': 'हमारा मिशन',
@@ -842,7 +808,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'समर्थित क्षेत्रीय भाषाएं',
     'about.impact.availability': 'स्वास्थ्य मार्गदर्शन उपलब्धता',
     'about.impact.quote': '"स्वास्थ्य एक मौलिक अधिकार है, विशेषाधिकार नहीं। ArogyaAI के माध्यम से, हम भारत में हर व्यक्ति को विश्वसनीय स्वास्थ्य जानकारी और मार्गदर्शन तक पहुंच सुनिश्चित करने के लिए प्रतिबद्ध हैं, भाषा, प्रौद्योगिकी और भूगोल की बाधाओं को तोड़ रहे हैं।"',
-    'about.impact.team': '- टीम ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -1223,15 +1189,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'এআই-চালিত বহুভাষী স্বাস্থ্যসেবা সহায়ক',
     'about.project.mission': 'মিশন',
     'about.project.missionDesc': 'প্রযুক্তির মাধ্যমে সবার জন্য স্বাস্থ্যসেবা সুলভ করা',
-    'about.team.title': 'প্রকল্প নির্মাতা',
+    'about.team.title': 'আমাদের নির্মাতা',
     'about.team.subtitle': 'ArogyaAI এর পিছনের মানুষদের সাথে পরিচিত হন',
     'about.tech.title': 'ব্যবহৃত প্রযুক্তি',
     'about.tech.subtitle': 'আধুনিক সরঞ্জাম এবং ফ্রেমওয়ার্ক দিয়ে তৈরি',
     
     // Team Members Section
-    'about.team.lead.title': 'আমাদের টিম লিড',
+    'about.team.lead.title': 'আমাদের লিড',
     'about.team.lead.name': 'শিবাংশু তিবারি',
-    'about.team.lead.role': 'টিম লিড - ডেভেলপার এবং প্রম্পট বিশেষজ্ঞ',
+    'about.team.lead.role': 'লিড - ডেভেলপার এবং প্রম্পট বিশেষজ্ঞ',
     'about.team.lead.desc': 'স্বাস্থ্যসেবা সমাধানের জন্য প্রযুক্তিগত বিকাশ এবং AI একীকরণ পরিচালনা করছেন। প্রযুক্তির মাধ্যমে স্বাস্থ্যসেবাকে অ্যাক্সেসযোগ্য করার জন্য আগ্রহী।',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -1239,23 +1205,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'সিস্টেম ডিজাইন',
     'about.team.lead.skill.health': 'স্বাস্থ্যসেবা প্রযুক্তি',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'টিম সদস্য',
-    'about.team.member.sakshi.name': 'সাক্ষী নেগী',
-    'about.team.member.sakshi.role': 'UI/UX ডিজাইনার',
-    'about.team.member.sakshi.desc': 'বিবিধ ব্যবহারকারী গোষ্ঠীর জন্য অ্যাক্সেসযোগ্য এবং ব্যবহারকারী-বান্ধব ইন্টারফেস তৈরি করছেন।',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'ব্যবহারকারী গবেষণা',
-    'about.team.member.sakshi.skill.accessibility': 'অ্যাক্সেসিবিলিটি',
-    'about.team.member.sakshi.skill.mobile': 'মোবাইল ডিজাইন',
-    
-    'about.team.member.ramit.name': 'রমিত রাজ সিংহ',
-    'about.team.member.ramit.role': 'ফ্রন্টএন্ড ডেভেলপার',
-    'about.team.member.ramit.desc': 'স্বাস্থ্যসেবা প্ল্যাটফর্মের জন্য প্রতিক্রিয়াশীল এবং ইন্টারঅ্যাকটিভ ব্যবহারকারী ইন্টারফেস ডেভেলপ করছেন।',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'প্রতিক্রিয়াশীল ডিজাইন',
     
     // Mission & Vision
     'about.mission.title': 'আমাদের মিশন',
@@ -1270,7 +1219,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'সমর্থিত আঞ্চলিক ভাষা',
     'about.impact.availability': 'স্বাস্থ্যসেবা নির্দেশনা উপলব্ধতা',
     'about.impact.quote': '"স্বাস্থ্যসেবা একটি মৌলিক অধিকার, বিশেষাধিকার নয়। ArogyaAI-এর মাধ্যমে, আমরা ভারতের প্রত্যেক ব্যক্তির কাছে নির্ভরযোগ্য স্বাস্থ্য তথ্য এবং নির্দেশনা অ্যাক্সেস নিশ্চিত করার জন্য প্রতিশ্রুতিবদ্ধ, ভাষা, প্রযুক্তি এবং ভূগোলের বাধা ভেঙে।"',
-    'about.impact.team': '- দল ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -1649,15 +1598,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-ஆல் இயக்கப்படும் பல மொழி சுகாதார உதவியாளர்',
     'about.project.mission': 'பணி',
     'about.project.missionDesc': 'தொழில்நுட்பத்தின் மூலம் அனைவருக்கும் சுகாதாரத்தை அணுகக்கூடியதாக்குதல்',
-    'about.team.title': 'திட்டம் உருவாக்குபவர்',
+    'about.team.title': 'எங்கள் உருவாக்குபவர்',
     'about.team.subtitle': 'ArogyaAI-ன் பின்னால் உள்ள மக்களைச் சந்திக்கவும்',
     'about.tech.title': 'பயன்படுத்தப்படும் தொழில்நுட்பங்கள்',
     'about.tech.subtitle': 'நவீன கருவிகள் மற்றும் சட்டகங்களால் கட்டப்பட்டது',
     
     // Team Members Section
-    'about.team.lead.title': 'எங்கள் அணி தலைவர்',
+    'about.team.lead.title': 'எங்கள் தலைவர்',
     'about.team.lead.name': 'ஷிவான்ஷு திவாரி',
-    'about.team.lead.role': 'அணி தலைவர் - டெவலப்பர் மற்றும் ப்ராம்ப்ட் நிபுணர்',
+    'about.team.lead.role': 'தலைவர் - டெவலப்பர் மற்றும் ப்ராம்ப்ட் நிபுணர்',
     'about.team.lead.desc': 'சுகாதார தீர்வுகளுக்கான தொழில்நுட்ப மேம்பாடு மற்றும் AI ஒருங்கிணைப்பை வழிநடத்துகிறார்। தொழில்நுட்பத்தின் மூலம் சுகாதாரத்தை அணுகக்கூடியதாக ஆக்குவதில் ஆர்வம் கொண்டவர்।',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -1665,23 +1614,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'அமைப்பு வடிவமைப்பு',
     'about.team.lead.skill.health': 'சுகாதாரத் தொழில்நுட்பம்',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'அணி உறுப்பினர்கள்',
-    'about.team.member.sakshi.name': 'சாக்ஷி நேகி',
-    'about.team.member.sakshi.role': 'UI/UX வடிவமைப்பாளர்',
-    'about.team.member.sakshi.desc': 'பல்வேறு பயனர் குழுக்களுக்கான அணுகக்கூடிய மற்றும் பயனர்-நட்பு இடைமுகங்களை உருவாக்குகிறார்।',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'பயனர் ஆராய்ச்சி',
-    'about.team.member.sakshi.skill.accessibility': 'அணுகல்',
-    'about.team.member.sakshi.skill.mobile': 'மொபைல் வடிவமைப்பு',
-    
-    'about.team.member.ramit.name': 'ரமித் ராஜ் சிங்',
-    'about.team.member.ramit.role': 'முன்புற டெவலப்பர்',
-    'about.team.member.ramit.desc': 'சுகாதார தளத்திற்கான எதிர்வினை மற்றும் ஊடாடும் பயனர் இடைமுகங்களை மேம்படுத்துகிறார்।',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'எதிர்வினை வடிவமைப்பு',
     
     // Mission & Vision
     'about.mission.title': 'எங்கள் பணி',
@@ -1696,7 +1628,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'ஆதரிக்கப்படும் பிராந்திய மொழிகள்',
     'about.impact.availability': 'சுகாதார வழிகாட்டுதல் கிடைப்பு',
     'about.impact.quote': '"சுகாதாரம் ஒரு அடிப்படை உரிமை, சலுகை அல்ல. ArogyaAI மூலம், மொழி, தொழில்நுட்பம் மற்றும் புவியியல் ஆகியவற்றின் தடைகளை உடைத்து, இந்தியாவில் உள்ள ஒவ்வொரு நபருக்கும் நம்பகமான சுகாதார தகவல் மற்றும் வழிகாட்டுதலை உறுதிசெய்வதில் நாங்கள் உறுதிபூண்டுள்ளோம்."',
-    'about.impact.team': '- அணி ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -2077,15 +2009,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-చేత నడుపబడే బహుభాషా ఆరోగ్య సహాయకుడు',
     'about.project.mission': 'మిషన్',
     'about.project.missionDesc': 'సాంకేతికత ద్వారా అందరికీ ఆరోగ్యాన్ని అందుబాటులో ఉంచడం',
-    'about.team.title': 'ప్రాజెక్ట్ నిర్మాత',
+    'about.team.title': 'మా నిర్మాత',
     'about.team.subtitle': 'ArogyaAI వెనుక ఉన్న వ్యక్తులను కలుసుకోండి',
     'about.tech.title': 'ఉపయోగించిన సాంకేతికతలు',
     'about.tech.subtitle': 'ఆధునిక సాధనాలు మరియు ఫ్రేమ్‌వర్క్‌లతో నిర్మించబడింది',
     
     // Team Members Section
-    'about.team.lead.title': 'మా బృంద నాయకుడు',
+    'about.team.lead.title': 'మా నాయకుడు',
     'about.team.lead.name': 'శివాంశు తివారి',
-    'about.team.lead.role': 'బృంద నాయకుడు - డెవలపర్ & ప్రాంప్ట్ నిపుణుడు',
+    'about.team.lead.role': 'నాయకుడు - డెవలపర్ & ప్రాంప్ట్ నిపుణుడు',
     'about.team.lead.desc': 'ఆరోగ్య పరిష్కారాల కోసం సాంకేతిక అభివృద్ధి మరియు AI ఇంటిగ్రేషన్‌ను నడిపిస్తున్నారు. సాంకేతికత ద్వారా ఆరోగ్యాన్ని అందుబాటులోకి తీసుకురావడంపై ఉత్సాహంగా ఉన్నారు.',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -2093,23 +2025,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'సిస్టమ్ డిజైన్',
     'about.team.lead.skill.health': 'ఆరోగ్య సాంకేతికత',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'బృంద సభ్యులు',
-    'about.team.member.sakshi.name': 'సాక్షి నేగి',
-    'about.team.member.sakshi.role': 'UI/UX డిజైనర్',
-    'about.team.member.sakshi.desc': 'వైవిధ్యమైన వినియోగదారు సమూహాల కోసం ప్రాప్యత మరియు వినియోగదారు-స్నేహపూర్వక ఇంటర్‌ఫేస్‌లను సృష్టిస్తున్నారు.',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'వినియోగదారు పరిశోధన',
-    'about.team.member.sakshi.skill.accessibility': 'ప్రాప్యత',
-    'about.team.member.sakshi.skill.mobile': 'మొబైల్ డిజైన్',
-    
-    'about.team.member.ramit.name': 'రమిత్ రాజ్ సింగ్',
-    'about.team.member.ramit.role': 'ఫ్రంటెండ్ డెవలపర్',
-    'about.team.member.ramit.desc': 'ఆరోగ్య వేదిక కోసం ప్రతిస్పందన మరియు ఇంటరాక్టివ్ వినియోగదారు ఇంటర్‌ఫేస్‌లను అభివృద్ధి చేస్తున్నారు.',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'ప్రతిస్పందన డిజైన్',
     
     // Mission & Vision
     'about.mission.title': 'మా మిషన్',
@@ -2124,7 +2039,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'మద్దతు ఇచ్చే ప్రాంతీయ భాషలు',
     'about.impact.availability': 'ఆరోగ్య మార్గదర్శకత్వం లభ్యత',
     'about.impact.quote': '"ఆరోగ్యం ఒక ప్రాథమిక హక్కు, అధికారం కాదు. ArogyaAI ద్వారా, భాష, సాంకేతికత మరియు భౌగోళిక పరిస్థితుల అడ్డంకులను తొలగించడం ద్వారా, భారతదేశంలోని ప్రతి వ్యక్తికి నమ్మకమైన ఆరోగ్య సమాచారం మరియు మార్గదర్శకత్వం అందుబాటులో ఉండేలా హామీ ఇస్తాము."',
-    'about.impact.team': '- బృందం ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -2505,15 +2420,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-ચલિત બહુભાષીય આરોગ્ય સહાયક',
     'about.project.mission': 'મિશન',
     'about.project.missionDesc': 'તકનીક દ્વારા બધા માટે આરોગ્યને સુલભ બનાવવું',
-    'about.team.title': 'પ્રોજેક્ટ સર્જક',
+    'about.team.title': 'અમારા સર્જક',
     'about.team.subtitle': 'ArogyaAI પાછળના લોકોને મળો',
     'about.tech.title': 'ઉપયોગમાં લેવાતી તકનીકો',
     'about.tech.subtitle': 'આધુનિક સાધનો અને ફ્રેમવર્ક સાથે બનાવવામાં આવ્યું',
     
     // Team Members Section
-    'about.team.lead.title': 'અમારા ટીમ લીડ',
+    'about.team.lead.title': 'અમારા લીડ',
     'about.team.lead.name': 'શિવાંશુ તિવારી',
-    'about.team.lead.role': 'ટીમ લીડ - ડેવલપર અને પ્રોમ્પ્ટ સ્પેશિયલિસ્ટ',
+    'about.team.lead.role': 'લીડ - ડેવલપર અને પ્રોમ્પ્ટ સ્પેશિયલિસ્ટ',
     'about.team.lead.desc': 'આરોગ્ય સોલ્યુશન માટે તકનીકી વિકાસ અને AI એકીકરણનું નેતૃત્વ કરી રહ્યા છે. તકનીક દ્વારા આરોગ્યને સુલભ બનાવવામાં ઉત્સાહિત.',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -2521,23 +2436,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'સિસ્ટમ ડિઝાઇન',
     'about.team.lead.skill.health': 'આરોગ્ય પ્રૌદ્યોગિકી',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'ટીમ સભ્યો',
-    'about.team.member.sakshi.name': 'સાક્ષી નેગી',
-    'about.team.member.sakshi.role': 'UI/UX ડિઝાઇનર',
-    'about.team.member.sakshi.desc': 'વિવિધ વપરાશકર્તા જૂથો માટે પ્રવેશયોગ્ય અને વપરાશકર્તા-મૈત્રીપૂર્ણ ઇન્ટરફેસ બનાવી રહ્યા છે.',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'વપરાશકર્તા સંશોધન',
-    'about.team.member.sakshi.skill.accessibility': 'પ્રવેશયોગ્યતા',
-    'about.team.member.sakshi.skill.mobile': 'મોબાઇલ ડિઝાઇન',
-    
-    'about.team.member.ramit.name': 'રમિત રાજ સિંહ',
-    'about.team.member.ramit.role': 'ફ્રન્ટએન્ડ ડેવલપર',
-    'about.team.member.ramit.desc': 'આરોગ્ય પ્લેટફોર્મ માટે રેસ્પોન્સિવ અને ઇન્ટરેક્ટિવ વપરાશકર્તા ઇન્ટરફેસ વિકસાવી રહ્યા છે.',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'રેસ્પોન્સિવ ડિઝાઇન',
     
     // Mission & Vision
     'about.mission.title': 'અમારું મિશન',
@@ -2552,7 +2450,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'સમર્થિત પ્રાદેશિક ભાષાઓ',
     'about.impact.availability': 'આરોગ્ય માર્ગદર્શન ઉપલબ્ધતા',
     'about.impact.quote': '"આરોગ્ય એ એક મૂળભૂત અધિકાર છે, વિશેષાધિકાર નહીં. ArogyaAI દ્વારા, અમે ભારતમાં દરેક વ્યક્તિને વિશ્વસનીય આરોગ્ય માહિતી અને માર્ગદર્શનની પ્રવેશ સુનિશ્ચિત કરવા માટે પ્રતિબદ્ધ છીએ, ભાષા, તકનીક અને ભૂગોળની અવરોધો તોડીને."',
-    'about.impact.team': '- ટીમ ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -2933,15 +2831,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-ಸಚಾಲಿತ ಬಹುಭಾಷಾ ಆರೋಗ್ಯ ಸಹಾಯಕ',
     'about.project.mission': 'ಕಾರ್ಯ',
     'about.project.missionDesc': 'ತಂತ್ರಜ್ಞಾನದ ಮೂಲಕ ಎಲ್ಲರಿಗೂ ಆರೋಗ್ಯವನ್ನು ಪ್ರವೇಶಿಸಬಲ್ಲದಾಗಿ ಮಾಡುವುದು',
-    'about.team.title': 'ಯೋಜನೆ ರಚನಾಕಾರ',
+    'about.team.title': 'ನಮ್ಮ ರಚನಾಕಾರ',
     'about.team.subtitle': 'ArogyaAI ಹಿಂದಿರುವ ಜನರನ್ನು ಭೇಟಿಯಾಗಿ',
     'about.tech.title': 'ಬಳಸಲಾದ ತಂತ್ರಜ್ಞಾನಗಳು',
     'about.tech.subtitle': 'ಆಧುನಿಕ ಉಪಕರಣಗಳು ಮತ್ತು ಚೌಕಟ್ಟುಗಳೊಂದಿಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ',
     
     // Team Members Section
-    'about.team.lead.title': 'ನಮ್ಮ ತಂಡದ ಮುಖ್ಯಸ್ಥ',
+    'about.team.lead.title': 'ನಮ್ಮ ಮುಖ್ಯಸ್ಥ',
     'about.team.lead.name': 'ಶಿವಾಂಶು ತಿವಾರಿ',
-    'about.team.lead.role': 'ತಂಡದ ಮುಖ್ಯಸ್ಥ - ಡೆವಲಪರ್ ಮತ್ತು ಪ್ರಾಂಪ್ಟ್ ನಿಪುಣ',
+    'about.team.lead.role': 'ಮುಖ್ಯಸ್ಥ - ಡೆವಲಪರ್ ಮತ್ತು ಪ್ರಾಂಪ್ಟ್ ನಿಪುಣ',
     'about.team.lead.desc': 'ಆರೋಗ್ಯ ಪರಿಹಾರಗಳಿಗಾಗಿ ತಾಂತ್ರಿಕ ಅಭಿವೃದ್ಧಿ ಮತ್ತು AI ಏಕೀಕರಣದ ನೇತೃತ್ವ ವಹಿಸುತ್ತಿದ್ದಾರೆ. ತಂತ್ರಜ್ಞಾನದ ಮೂಲಕ ಆರೋಗ್ಯವನ್ನು ಪ್ರವೇಶಿಸಬಲ್ಲವಾಗಿ ಮಾಡಲು ಉತ್ಸಾಹಿಗಳು.',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -2949,23 +2847,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'ವ್ಯವಸ್ಥೆಯ ವಿನ್ಯಾಸ',
     'about.team.lead.skill.health': 'ಆರೋಗ್ಯ ತಂತ್ರಜ್ಞಾನ',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'ತಂಡದ ಸದಸ್ಯರು',
-    'about.team.member.sakshi.name': 'ಸಾಕ್ಷಿ ನೇಗಿ',
-    'about.team.member.sakshi.role': 'UI/UX ವಿನ್ಯಾಸಕ',
-    'about.team.member.sakshi.desc': 'ವೈವಿಧ್ಯಮಯ ಬಳಕೆದಾರರ ಗುಂಪುಗಳಿಗಾಗಿ ಪ್ರವೇಶ್ಯ ಮತ್ತು ಬಳಕೆದಾರ-ಸ್ನೇಹಿ ಇಂಟರ್ಫೇಸ್‌ಗಳನ್ನು ರಚಿಸುತ್ತಿದ್ದಾರೆ.',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'ಬಳಕೆದಾರ ಸಂಶೋಧನೆ',
-    'about.team.member.sakshi.skill.accessibility': 'ಪ್ರವೇಶ್ಯತೆ',
-    'about.team.member.sakshi.skill.mobile': 'ಮೊಬೈಲ್ ವಿನ್ಯಾಸ',
-    
-    'about.team.member.ramit.name': 'ರಮಿತ್ ರಾಜ್ ಸಿಂಗ್',
-    'about.team.member.ramit.role': 'ಮುಂಭಾಗದ ಡೆವಲಪರ್',
-    'about.team.member.ramit.desc': 'ಆರೋಗ್ಯ ವೇದಿಕೆಗಾಗಿ ಪ್ರತಿಕ್ರಿಯಾತ್ಮಕ ಮತ್ತು ಪರಸ್ಪರ ಕ್ರಿಯಾಶೀಲ ಬಳಕೆದಾರ ಇಂಟರ್ಫೇಸ್‌ಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸುತ್ತಿದ್ದಾರೆ.',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'ಪ್ರತಿಕ್ರಿಯಾತ್ಮಕ ವಿನ್ಯಾಸ',
     
     // Mission & Vision
     'about.mission.title': 'ನಮ್ಮ ಮಿಷನ್',
@@ -2980,7 +2861,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'ಬೆಂಬಲಿತ ಪ್ರಾದೇಶಿಕ ಭಾಷೆಗಳು',
     'about.impact.availability': 'ಆರೋಗ್ಯ ಮಾರ್ಗದರ್ಶನ ಲಭ್ಯತೆ',
     'about.impact.quote': '"ಆರೋಗ್ಯವು ಮೂಲಭೂತ ಹಕ್ಕು, ವಿಶೇಷಾಧಿಕಾರವಲ್ಲ. ArogyaAI ಮೂಲಕ, ಭಾಷೆ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಭೂಗೋಳಶಾಸ್ತ್ರದ ಅಡೆತಡೆಗಳನ್ನು ಭಂಗಿಸುವ ಮೂಲಕ, ಭಾರತದಲ್ಲಿ ಪ್ರತಿಯೊಬ್ಬ ವ್ಯಕ್ತಿಗೆ ನಂಬಲರ್ಹ ಆರೋಗ್ಯ ಮಾಹಿತಿ ಮತ್ತು ಮಾರ್ಗದರ್ಶನವನ್ನು ಖಚಿತಪಡಿಸಲು ನಾವು ಬದ್ಧರಾಗಿದ್ದೇವೆ."',
-    'about.impact.team': '- ತಂಡ ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
@@ -3361,15 +3242,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.project.focusDesc': 'AI-ചാലക ബഹുഭാഷാ ആരോഗ്യ സഹായി',
     'about.project.mission': 'ദൗത്യം',
     'about.project.missionDesc': 'സാങ്കേതികവിദ്യ വഴി എല്ലാവർക്കും ആരോഗ്യം ആക്സസ് ചെയ്യാവുന്നതാക്കുന്നു',
-    'about.team.title': 'പ്രോജക്റ്റ് സ്രഷ്ടാവ്',
+    'about.team.title': 'ഞങ്ങളുടെ സ്രഷ്ടാവ്',
     'about.team.subtitle': 'ArogyaAI ന്റെ പിന്നിലുള്ള ആളുകളെ കണ്ടുമുട്ടുക',
     'about.tech.title': 'ഉപയോഗിക്കുന്ന സാങ്കേതികവിദ്യകൾ',
     'about.tech.subtitle': 'ആധുനിക ഉപകരണങ്ങളും ഫ്രേംവർക്കുകളും ഉപയോഗിച്ച് നിർമ്മിച്ചത്',
     
     // Team Members Section
-    'about.team.lead.title': 'ഞങ്ങളുടെ ടീം ലീഡ്',
+    'about.team.lead.title': 'ഞങ്ങളുടെ ലീഡ്',
     'about.team.lead.name': 'ശിവാംശു തിവാരി',
-    'about.team.lead.role': 'ടീം ലീഡ് - ഡവലപ്പർ & പ്രോമ്പ്റ്റ് സ്പെഷ്യലിസ്റ്റ്',
+    'about.team.lead.role': 'ലീഡ് - ഡവലപ്പർ & പ്രോമ്പ്റ്റ് സ്പെഷ്യലിസ്റ്റ്',
     'about.team.lead.desc': 'ആരോഗ്യ പരിഹാരങ്ങൾക്കായി സാങ്കേതിക വികസനവും AI സംയോജനവും നയിക്കുന്നു. സാങ്കേതികവിദ്യയിലൂടെ ആരോഗ്യത്തെ ആക്സസ് ചെയ്യാവുന്നതാക്കുന്നതിൽ താൽപ്പര്യമുള്ളവർ.',
     'about.team.lead.skill.react': 'React',
     'about.team.lead.skill.node': 'Node.js',
@@ -3377,23 +3258,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.team.lead.skill.system': 'സിസ്റ്റം ഡിസൈൻ',
     'about.team.lead.skill.health': 'ആരോഗ്യ സാങ്കേതികവിദ്യ',
     'about.team.lead.contact.github': 'GitHub',
-    
-    'about.team.members.title': 'ടീം അംഗങ്ങൾ',
-    'about.team.member.sakshi.name': 'സാക്ഷി നേഗി',
-    'about.team.member.sakshi.role': 'UI/UX ഡിസൈനർ',
-    'about.team.member.sakshi.desc': 'വൈവിധ്യമാർന്ന ഉപഭോക്താക്കൾക്കായി ആക്സസ് ചെയ്യാവുന്നതും ഉപയോക്തൃ-സൗഹൃദ ഇന്റർഫേസുകളും സൃഷ്ടിക്കുന്നു.',
-    'about.team.member.sakshi.skill.figma': 'Figma',
-    'about.team.member.sakshi.skill.research': 'ഉപയോക്തൃ ഗവേഷണം',
-    'about.team.member.sakshi.skill.accessibility': 'ആക്സസിബിലിറ്റി',
-    'about.team.member.sakshi.skill.mobile': 'മൊബൈൽ ഡിസൈൻ',
-    
-    'about.team.member.ramit.name': 'രമിത് രാജ് സിംഗ്',
-    'about.team.member.ramit.role': 'ഫ്രണ്ടെന്ഡ് ഡവലപ്പർ',
-    'about.team.member.ramit.desc': 'ആരോഗ്യ പ്ലാറ്റ്ഫോമിനായി പ്രതികരണാത്മകവും സംവേദനാത്മകവുമായ ഉപയോക്തൃ ഇന്റർഫേസുകൾ വികസിപ്പിക്കുന്നു.',
-    'about.team.member.ramit.skill.react': 'React',
-    'about.team.member.ramit.skill.js': 'JavaScript',
-    'about.team.member.ramit.skill.css': 'CSS',
-    'about.team.member.ramit.skill.responsive': 'പ്രതികരണാത്മക ഡിസൈൻ',
     
     // Mission & Vision
     'about.mission.title': 'ഞങ്ങളുടെ ദൗത്യം',
@@ -3408,7 +3272,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.impact.languages': 'പിന്തുണയ്ക്കുന്ന പ്രാദേശിക ഭാഷകൾ',
     'about.impact.availability': 'ആരോഗ്യ മാർഗദർശന ലഭ്യത',
     'about.impact.quote': '"ആരോഗ്യം ഒരു അടിസ്ഥാന അവകാശമാണ്, പ്രത്യേകാവകാശമല്ല. ArogyaAI വഴി, ഭാഷ, സാങ്കേതികവിദ്യ, ഭൂമിശാസ്ത്രത്തിന്റെ തടസ്സങ്ങൾ തകർത്തുകൊണ്ട്, ഇന്ത്യയിലെ ഓരോ വ്യക്തിക്കും വിശ്വസനീയമായ ആരോഗ്യ വിവരവും മാർഗദർശനവും ഉറപ്പാക്കാൻ ഞങ്ങൾ പ്രതിബദ്ധരാണ്."',
-    'about.impact.team': '- ടീം ArogyaAI',
+    'about.impact.team': '- ArogyaAI',
     
     // Technologies
     'about.tech.react': 'React.js',
