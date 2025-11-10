@@ -16,7 +16,7 @@ Your Google API key is restricted to specific HTTP referrers (domains), and your
 
 ### 3. Navigate to API Credentials
 - Go to: **APIs & Services** → **Credentials**
-- Find your API key: `AIzaSyCbt1BCE0vc9rGaiJxSSckNfm8pNVQIFhE`
+- Find your API key: `   `
 - Click on the API key name to edit it
 
 ### 4. Update Application Restrictions
